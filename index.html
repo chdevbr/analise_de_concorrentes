@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Concorrentes</title>
+    <style>
+        /* --- Estilos Gerais --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* --- Container Principal (como na imagem) --- */
+        .analysis-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden; /* Para conter a tabela */
+        }
+
+        /* --- Títulos (inspirado na imagem) --- */
+        .header-section {
+            padding: 24px 30px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-section h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a253c;
+            margin: 0 0 4px 0;
+        }
+
+        .header-section p {
+            font-size: 16px;
+            color: #5a6474;
+            margin: 0;
+        }
+
+        /* --- Estilo da Tabela --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eaeaea;
+            vertical-align: middle;
+        }
+
+        /* --- Cabeçalho da Tabela (Estilo "Sala Virtual" da imagem) --- */
+        thead th {
+            /* Cor azul/púrpura clara da imagem de inspiração */
+            background-color: #EAF0FC; 
+            color: #004AAD; /* Cor do texto da imagem */
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        
+        /* Alinha o primeiro cabeçalho à esquerda */
+        thead th:first-child {
+            text-align: left;
+        }
+
+        /* --- Corpo da Tabela --- */
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9; /* Linhas alternadas */
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        tbody td {
+            color: #333;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        /* Alinha a primeira coluna (Nomes) à esquerda */
+        tbody td:first-child {
+            text-align: left;
+            font-weight: 500;
+            color: #111;
+        }
+
+        /* --- Estilos de Status (Sim/Não/Parcial) --- */
+        /* Inspirado nos ✔ e ❌ da imagem */
+        
+        .status {
+            font-weight: 600;
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 13px;
+        }
+
+        /* Estilo para "Sim" (Verde) */
+        .status-yes {
+            color: #28a745;
+            background-color: #e3f6e9;
+        }
+
+        /* Estilo para "Não" (Vermelho) */
+        .status-no {
+            color: #dc3545;
+            background-color: #fde8ea;
+        }
+
+        /* Estilo para "Parcial" (Laranja/Amarelo) */
+        .status-partial {
+            color: #E67E22;
+            background-color: #fef5e8;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="analysis-container">
+        
+        <div class="header-section">
+            <h1>Análise Consolidada de Concorrentes</h1>
+            <p>Comparação de plataformas de incentivo à leitura e alfabetização (Baseado no PDF)</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Concorrente</th>
+                    <th>Público-alvo</th>
+                    <th>Formato principal</th>
+                    <th>Uso de vídeo curto</th>
+                    <th>Foco pedagógico/alfabetização</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Leiturinha</td>
+                    <td>Crianças (pais)</td>
+                    <td>Clube físico + e-books/audiobooks</td>
+                    <td><span class="status status-no">Não</span></td>
+                    <td><span class="status status-yes">Sim (materiais)</span></td>
+                </tr>
+                <tr>
+                    <td>Wiser</td>
+                    <td>Adultos</td>
+                    <td>Resumo (texto/áudio)</td>
+                    <td><span class="status status-no">Não</span></td>
+                    <td><span class="status status-no">Não</span></td>
+                </tr>
+                <tr>
+                    <td>Blinkist</td>
+                    <td>Adultos</td>
+                    <td>Resumo (texto/áudio)</td>
+                    <td><span class="status status-no">Não</span></td>
+                    <td><span class="status status-no">Não</span></td>
+                </tr>
+                <tr>
+                    <td>LeR</td>
+                    <td>Escolas/Leitores</td>
+                    <td>Rede/Compartilhamento</td>
+                    <td><span class="status status-no">Não</span></td>
+                    <td><span class="status status-partial">Parcial (escolar)</span></td>
+                </tr>
+                <tr>
+                    <td>12min</td>
+                    <td>Adultos</td>
+                    <td>Resumo (texto/áudio)</td>
+                    <td><span class="status status-no">Não</span></td>
+                    <td><span class="status status-no">Não</span></td>
+                </tr>
+                <tr>
+                    <td>Storytel</td>
+                    <td>Adultos & Kids Mode</td>
+                    <td>Audiolivro/eBook</td>
+                    <td><span class="status status-no">Não</span></td>
+                    <td><span class="status status-partial">Parcial (Kids Mode)</span></td>
+                </tr>
+                <tr>
+                    <td>Ubook</td>
+                    <td>Adultos</td>
+                    <td>Audiolivros/eBooks</td>
+                    <td><span class="status status-no">Não</span></td>
+                    <td><span class="status status-no">Não</span></td>
+                </tr>
+                <tr>
+                    <td>Skoob</td>
+                    <td>Leitores (comunitário)</td>
+                    <td>Rede social</td>
+                    <td><span class="status status-no">Não</span></td>
+                    <td><span class="status status-no">Não</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
